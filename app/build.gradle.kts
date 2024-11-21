@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.ksp.android)
     id("kotlin-kapt")
     alias(libs.plugins.hilt.android)
+    kotlin("plugin.serialization") version "1.8.0"
+    id("kotlin-parcelize")
 }
 
 android {
@@ -75,6 +77,18 @@ dependencies {
     implementation(libs.room.ktx)
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.koin.android)
+    implementation(libs.koin.android.compose)
+    implementation(libs.coil.compose)
+    implementation(libs.compose.material)
+
+    implementation (libs.ktor.client.core)
+    implementation (libs.ktor.client.cio)
+    implementation (libs.ktor.client.logging)
+    implementation (libs.ktor.client.content.negotiation)
+    implementation (libs.ktor.serialization.kotlinx.json)
+
+
     ksp(libs.hilt.compiler)
     ksp(libs.room.compiler)
     testImplementation(libs.junit)
