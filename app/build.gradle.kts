@@ -81,7 +81,9 @@ dependencies {
     implementation(libs.koin.android.compose)
     implementation(libs.coil.compose)
     implementation(libs.compose.material)
-
+    implementation(libs.work.manager)
+    implementation(libs.work.manager.dagger)
+    ksp(libs.work.manager.dagger.kapt)
     implementation (libs.ktor.client.core)
     implementation (libs.ktor.client.cio)
     implementation (libs.ktor.client.logging)
