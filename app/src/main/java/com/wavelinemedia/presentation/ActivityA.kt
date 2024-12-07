@@ -38,6 +38,7 @@ class ActivityA : AppCompatActivity() {
         viewModel.notifications.observe(this) { notifications ->
             adapter.submitList(notifications)
             progressBar.visibility = View.GONE
+            recyclerView.visibility = View.VISIBLE
         }
 
         viewModel.loadNotifications()

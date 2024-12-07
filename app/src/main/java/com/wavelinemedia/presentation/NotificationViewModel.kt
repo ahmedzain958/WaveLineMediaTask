@@ -8,6 +8,7 @@ import com.wavelinemedia.domain.GetNotificationsUseCase
 import com.wavelinemedia.domain.Notification
 import com.wavelinemedia.domain.ScheduleNotificationUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -22,6 +23,7 @@ class NotificationViewModel @Inject constructor(
 
     fun loadNotifications() {
         viewModelScope.launch {
+            delay(1000)
             _notifications.value = getNotificationsUseCase()
         }
     }

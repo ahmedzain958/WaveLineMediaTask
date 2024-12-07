@@ -54,7 +54,11 @@ class ActivityB : AppCompatActivity() {
 
     private fun cancelNotification(notificationId: Int) {
         viewModel.cancelNotification(notificationId)
-        Toast.makeText(this, "Notification $notificationId cancelled", Toast.LENGTH_SHORT).show()
+        Toast.makeText(
+            this,
+            "Notification $notificationId with ${notification.timeInSeconds} seconds cancelled",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
