@@ -37,7 +37,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import com.wavelinemedia.workmanager.common.formatTimestampToDMY
 import com.wavelinemedia.workmanager.presentation.ui.theme.WorkManagerYTTheme
-
+//https://www.youtube.com/watch?v=us-GmyBeC3Q&t=1772s
 @AndroidEntryPoint
 class MainWorkManagerActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
