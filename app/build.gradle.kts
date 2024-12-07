@@ -18,6 +18,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        multiDexEnabled = true
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -43,10 +44,9 @@ android {
     }
     buildFeatures {
         compose = true
-    }
-    buildFeatures {
-        compose = true
         buildConfig = true
+        dataBinding = true
+
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -83,6 +83,8 @@ dependencies {
     implementation(libs.compose.material)
     implementation(libs.work.manager)
     implementation(libs.work.manager.dagger)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.recyclerview)
     ksp(libs.work.manager.dagger.kapt)
     implementation (libs.ktor.client.core)
     implementation (libs.ktor.client.cio)
